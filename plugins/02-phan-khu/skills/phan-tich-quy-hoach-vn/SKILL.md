@@ -40,12 +40,48 @@ Sau đó bắt đầu nghiên cứu — không hỏi thêm.
 
 1. Xác nhận tỉnh/thành phố từ địa chỉ
 2. Tìm kiếm cổng tra cứu quy hoạch online của tỉnh/thành đó:
-   - TP.HCM: `quyhoach.tphcm.gov.vn`
    - Hà Nội: `quyhoach.hanoi.vn` hoặc website Sở QHKT Hà Nội
    - Đà Nẵng: `quyhoach.danang.gov.vn`
    - Các tỉnh khác: web search `"quy hoạch" + "[tên tỉnh]" + "1/500"`
 3. Nếu tìm được cổng online: truy cập và trích xuất thông số
 4. Nếu không tìm được: sử dụng bản đồ người dùng upload (nếu có) hoặc áp dụng QCVN 01:2021/BXD làm khung tham chiếu
+
+### Bước 1b: Tra Cứu GIS TP.HCM (Chỉ Cho Địa Chỉ TP.HCM)
+
+Nếu địa chỉ thuộc TP.HCM, **bắt buộc** thực hiện bước này trước khi phân tích:
+
+**Nguồn 1 — GIS tra cứu quy hoạch (ưu tiên):**
+`https://gisxaydung.tphcm.gov.vn/quy-hoach-xd-pk/`
+
+1. Nếu người dùng có **số tờ + số thửa** (từ sổ đỏ):
+   → Chọn Quận → Phường → nhập Số tờ + Số thửa → Tìm kiếm
+   → Hệ thống trả về: mã chức năng đất, diện tích, tầng cao, MDXD, HSSDĐ, QĐ phê duyệt
+
+2. Nếu chỉ có **địa chỉ** (không có số tờ/thửa):
+   → Hướng dẫn người dùng: "Để tra cứu chính xác trên GIS TP.HCM, bạn cần số tờ và số thửa từ sổ đỏ. Nếu chưa có, bạn có thể zoom vào khu vực trên bản đồ tại `gisxaydung.tphcm.gov.vn/quy-hoach-xd-pk/` và click vào thửa đất."
+
+3. Dữ liệu cần thu thập từ GIS:
+
+| Trường GIS | Ý nghĩa skill | Ghi chú |
+|---|---|---|
+| Mục đích sử dụng đất | Chức năng đất | KDC, SKC, CTC, DGT... (xem `ma-quy-hoach-hcm.md`) |
+| Tầng cao xây dựng (tầng) | Tầng cao tối đa | Thường trống ở QH 1/5000 |
+| Mật độ xây dựng TB (%) | MDXD | Thường trống ở QH 1/5000 |
+| Hệ số sử dụng đất | HSSDĐ | Thường trống ở QH 1/5000 |
+| QĐ phê duyệt | Nguồn tham chiếu | VD: 6692/QĐ-UBND ngày 28/12/2012 |
+
+4. **Khi GIS trả về trường trống** (phổ biến ở 1/5000):
+   - Ghi: "QH 1/5000 không ghi giá trị cụ thể — cần tra QH 1/2000 hoặc 1/500 tại Sở QHKT"
+   - Dùng QCVN 01:2021/BXD làm **fallback tham chiếu** (ghi rõ là fallback)
+   - Tra thêm quyết định phê duyệt QH quận trong `ma-quy-hoach-hcm.md`
+
+5. **Lưu ý:** Dữ liệu GIS ghi "tính chất tham khảo" — luôn đính kèm tuyên bố miễn trừ.
+
+**Nguồn 2 — PDF quyết định phê duyệt:**
+`https://qhkt.hochiminhcity.gov.vn/ban-do-quy-hoach.html`
+→ Tra quận/huyện → tải PDF QĐ phê duyệt → đọc chỉ tiêu quy hoạch trong QĐ
+→ URL pattern: `/Uploads/Document/Maps/QHC_{Quận}_{SốQĐ}_QD_UBND_{Ngày}.pdf`
+→ Danh sách đầy đủ: xem `reference/ma-quy-hoach-hcm.md`, mục 5
 
 ### Bước 2: Thu Thập Thông Số Quy Hoạch
 

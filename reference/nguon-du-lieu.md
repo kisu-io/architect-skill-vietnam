@@ -59,16 +59,30 @@ Tệp này hướng dẫn cách truy cập dữ liệu cho các kỹ năng kiế
 **Tình trạng:** Bản đồ quy hoạch 1/500, 1/2000 được phê duyệt tại cấp tỉnh/thành. Không có API quốc gia. Một số tỉnh/thành công bố online, đa số cần tra cứu trực tiếp.
 
 **Cách truy cập:**
-- TP.HCM: [quyhoach.tphcm.gov.vn](http://quyhoach.tphcm.gov.vn) — tra cứu thửa đất online (hạn chế)
+
+**TP.HCM (dữ liệu phong phú nhất):**
+
+| Nguồn | URL | Nội dung | Cách dùng |
+|---|---|---|---|
+| GIS tra cứu QH | [gisxaydung.tphcm.gov.vn/quy-hoach-xd-pk/](https://gisxaydung.tphcm.gov.vn/quy-hoach-xd-pk/) | Bản đồ GIS tương tác, tra cứu theo thửa đất hoặc tọa độ | Nhập số tờ/thửa → xem chức năng đất, MDXD, tầng cao, QĐ |
+| PDF QĐ phê duyệt | [qhkt.hochiminhcity.gov.vn/ban-do-quy-hoach.html](https://qhkt.hochiminhcity.gov.vn/ban-do-quy-hoach.html) | PDF quyết định phê duyệt QHC + bản đồ 1/5000 theo quận | Tải PDF, đọc chỉ tiêu |
+| Cổng Sở QHKT | [qhkt.hochiminhcity.gov.vn](https://qhkt.hochiminhcity.gov.vn) | Tin tức, thủ tục hành chính, thư viện pháp luật | Tra cứu QĐ điều chỉnh mới |
+
+- Dữ liệu GIS ghi "tính chất tham khảo" — cần xác minh tại Sở QHKT cho pháp lý
+- Mã quận/huyện, mã đất, danh sách QĐ: xem `reference/ma-quy-hoach-hcm.md`
+- GIS thường trống MDXD/HSSDĐ/tầng cao ở cấp 1/5000 → cần 1/2000 hoặc 1/500
+
+**Các tỉnh/thành khác:**
 - Hà Nội: Sở QHKT Hà Nội [hanoi.gov.vn](https://hanoi.gov.vn) — công bố quy hoạch phân khu
 - Đà Nẵng: [quyhoach.danang.gov.vn](https://quyhoach.danang.gov.vn) — bản đồ quy hoạch online
 - Các tỉnh khác: Tra cứu tại Sở QHKT hoặc Phòng QLĐT quận/huyện
 
 **Giải pháp trong kỹ năng:**
-1. Hỏi người dùng tỉnh/thành → kiểm tra có cổng tra cứu online không
-2. Nếu không có: yêu cầu người dùng upload ảnh/PDF bản đồ quy hoạch
-3. Đọc thông số từ ảnh/PDF bằng AI: mật độ, tầng cao, khoảng lùi, chức năng đất
-4. Ghi rõ: "Thông số đọc từ bản đồ quy hoạch do người dùng cung cấp — cần xác minh tại Sở QHKT"
+1. Hỏi người dùng tỉnh/thành → nếu TP.HCM → dùng GIS tra cứu (xem Bước 1b trong `phan-tich-quy-hoach-vn`)
+2. Nếu tỉnh khác: kiểm tra có cổng tra cứu online không
+3. Nếu không có: yêu cầu người dùng upload ảnh/PDF bản đồ quy hoạch
+4. Đọc thông số từ ảnh/PDF bằng AI: mật độ, tầng cao, khoảng lùi, chức năng đất
+5. Ghi rõ: "Thông số đọc từ bản đồ quy hoạch do người dùng cung cấp — cần xác minh tại Sở QHKT"
 
 ### 2.2. Giấy Chứng Nhận Quyền Sử Dụng Đất (Sổ Đỏ / Sổ Hồng)
 

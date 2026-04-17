@@ -28,9 +28,25 @@ Hỏi **địa chỉ + tỉnh/thành phố**. Sau đó nghiên cứu.
 ### 1. Kiểm Tra Cổng Quy Hoạch Online
 
 Truy cập cổng tra cứu quy hoạch của tỉnh/thành (nếu có):
-- TP.HCM: `quyhoach.tphcm.gov.vn`
 - Hà Nội: `quyhoach.hanoi.vn`
 - Đà Nẵng: `quyhoach.danang.gov.vn`
+
+### 1b. Tra Cứu GIS TP.HCM (Nếu Địa Chỉ Thuộc TP.HCM)
+
+**GIS tra cứu quy hoạch:** `gisxaydung.tphcm.gov.vn/quy-hoach-xd-pk/`
+- Tra bằng **số tờ + số thửa** (từ sổ đỏ): Quận → Phường → nhập số → Tìm kiếm
+- Hoặc zoom vào khu vực trên bản đồ → click vào thửa đất
+- Kết quả: chức năng đất, QĐ phê duyệt, tầng cao, MDXD, HSSDĐ
+- Nếu trường trống (phổ biến ở QH 1/5000): ghi "cần tra QH 1/2000 hoặc 1/500"
+
+**PDF quyết định phê duyệt:** `qhkt.hochiminhcity.gov.vn/ban-do-quy-hoach.html`
+- Mỗi quận có PDF QĐ phê duyệt QHC → tải về, đọc chỉ tiêu
+- Danh sách đầy đủ URL: xem `reference/ma-quy-hoach-hcm.md`
+
+**Kiểm tra chức năng đất thực tế:**
+- Mã chức năng từ GIS: KDC (dân cư), SKC (sản xuất KD), CTC (công cộng), DGT (giao thông)...
+- Nếu chức năng đất không phù hợp dự án → cảnh báo cần chuyển MĐSDĐ
+- Xem đầy đủ mã: `reference/ma-quy-hoach-hcm.md`
 
 ### 2. Tra Cứu Quy Hoạch Treo
 
