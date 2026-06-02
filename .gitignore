@@ -1,0 +1,17 @@
+# Internal working files — not for public repo
+_noi-bo/
+**/_noi-bo/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

@@ -9,7 +9,7 @@ This is the recommended approach for non-developers.
 ### Step 1: Download the skill files
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/architect-skill-vietnam.git
+git clone https://github.com/kisu-io/architect-skill-vietnam.git
 ```
 
 Or download as ZIP from GitHub and extract.
@@ -18,7 +18,7 @@ Or download as ZIP from GitHub and extract.
 
 1. Open the Claude desktop app
 2. Switch to **Cowork mode** (click the Cowork toggle or select it from the mode picker)
-3. Click **Select a folder** and choose the `architect-skill-vietnam` directory you just downloaded
+3. Click **Select a folder** and choose the `claude-code/` subfolder inside the cloned `architect-skill-vietnam` repo
 
 ### Step 3: Verify
 
@@ -32,7 +32,7 @@ Claude should recognize the skill and begin the zoning analysis workflow.
 
 ### How it works
 
-When you select the `architect-skill-vietnam` folder in Cowork mode, Claude automatically reads the `rules/`, `reference/`, `plugins/`, and `agents/` directories. Each `SKILL.md` file inside a `skills/*/` directory becomes an invocable skill.
+When you select the `claude-code/` folder in Cowork mode, Claude automatically reads the `rules/`, `reference/`, `plugins/`, and `agents/` directories. Each `SKILL.md` file inside a `skills/*/` directory becomes an invocable skill.
 
 ---
 
@@ -44,7 +44,7 @@ For developers using Claude Code from the terminal.
 
 ```bash
 cd your-project-directory
-git clone https://github.com/YOUR_USERNAME/architect-skill-vietnam.git .claude/skills/architect-skill-vietnam
+git clone https://github.com/kisu-io/architect-skill-vietnam.git .claude/skills/architect-skill-vietnam
 ```
 
 Or add as a subdirectory:

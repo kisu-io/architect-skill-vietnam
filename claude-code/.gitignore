@@ -1,0 +1,6 @@
+# Internal working files — not for public repo
+_noi-bo/
+
+# macOS
+.DS_Store
+**/.DS_Store
